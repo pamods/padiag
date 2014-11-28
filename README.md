@@ -2,7 +2,9 @@
 
 Produce a report on loaded mods for support and debugging.
 
-Activates by keybinding, which defaults to ctrl+shift+alt+d You need to be in the lobby (new_game) or game (live_game) to capture active server mods.
+Activates by keybinding, which defaults to ctrl+shift+alt+d You need to be in the lobby (`new_game`) or game (`live_game`) to capture active server mods.
+
+Adding universal keybindings adds a small amount of overhead, so users may want to disable the mod when not in use.
 
 ## Sample
 

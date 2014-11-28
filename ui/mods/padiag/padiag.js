@@ -29,8 +29,7 @@
   }
 
   var saveReport = function(report) {
-    // not that it's used at the moment
-    var suggestedFilename = 'padiag-' + report.date + '.json'
+    var suggestedFilename = 'padiag-' + report.date.replace(':', '.') + '.json'
 
     api.file.saveDialog(suggestedFilename, JSON.stringify(report, null, 2));
   }
