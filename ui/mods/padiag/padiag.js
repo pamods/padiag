@@ -12,6 +12,13 @@
     $.when(cp, sp).then(function(client, server) {
       promise.resolve({
         date: (new Date().toJSON()),
+        build_version: JSON.parse(sessionStorage.build_version),
+        os: JSON.parse(sessionStorage.os),
+        has_steam_client: JSON.parse(sessionStorage.has_steam_client),
+        is_steam_client_online: JSON.parse(sessionStorage.is_steam_client_online),
+        locale: JSON.parse(localStorage.locale),
+        screen: screen,
+        location: location.toString(), // new_game/live_game server mods will be valid
         client_mods: client,
         server_mods: server,
         scene_mod_list: scene_mod_list,
@@ -32,6 +39,7 @@
     console.log('Gathering info for PA-Diag')
     capture().then(function(dump) {
       console.log(dump)
+      //console.log(JSON.stringify(dump, null, 2))
       saveReport(dump)
     })
   }
