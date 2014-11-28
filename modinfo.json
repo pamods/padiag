@@ -1,0 +1,20 @@
+{
+  "author": "wondible",
+  "build": "75539",
+  "category": ["modding", "debugging"],
+  "context": "client",
+  "date": "2014/11/27",
+  "description": "Produce a report on loaded mods for support and debugging.",
+  "display_name": "PA-Diag",
+  "forum": null,
+  "identifier": "com.wondible.pa.padiag",
+  "priority": 100,
+  "scenes": {
+    "global_mod_list": [
+      "coui://ui/mods/padiag/padiag.js"
+    ]
+  },
+  "signature": "not yet implemented",
+  "version": "0.1.0"
+}
+
