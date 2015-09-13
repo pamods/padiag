@@ -14,6 +14,16 @@
         date: (new Date().toJSON()),
         build_version: JSON.parse(sessionStorage.build_version),
         os: JSON.parse(sessionStorage.os),
+        graphics_vendor: JSON.parse(sessionStorage.graphics_vendor),
+        local_server: {
+          available: JSON.parse(sessionStorage.local_server_available),
+          recommended: JSON.parse(sessionStorage.local_server_recommended),
+          in_use: JSON.parse(sessionStorage.use_local_server),
+        },
+        content: {
+          unlocked: api.content.unlocked(),
+          active: api.content.active(),
+        },
         has_steam_client: JSON.parse(sessionStorage.has_steam_client),
         is_steam_client_online: JSON.parse(sessionStorage.is_steam_client_online),
         locale: JSON.parse(localStorage.locale),
@@ -29,7 +39,7 @@
   }
 
   var saveReport = function(report) {
-    var suggestedFilename = 'padiag-' + report.date.replace(':', '.') + '.json'
+    var suggestedFilename = 'padiag-' + report.date.replace(/:/g, '.') + '.json'
 
     api.file.saveDialog(suggestedFilename, JSON.stringify(report, null, 2));
   }

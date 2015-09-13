@@ -1,9 +1,9 @@
 {
   "author": "wondible",
-  "build": "75539",
-  "category": ["modding", "debugging"],
+  "build": "87296",
+  "category": ["modding"],
   "context": "client",
-  "date": "2014/11/28",
+  "date": "2015/09/12",
   "description": "Produce a report on loaded mods for support and debugging - ctrl+shift+alt+d",
   "display_name": "PA-Diag",
   "forum": "https://forums.uberent.com/threads/rel-pa-diag.66208/",
@@ -15,6 +15,6 @@
     ]
   },
   "signature": "not yet implemented",
-  "version": "1.0.2"
+  "version": "1.1.0"
 }
 
